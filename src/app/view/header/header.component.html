@@ -1,0 +1,7 @@
+<div class=" row bg-primary " style="min-height: 70px;">
+    <div class="col-4 text-light pt-3 pl-5"><strong>Rxjs</strong></div>
+    <div class="col-4 text-light pt-3 pl-5" *ngIf="isLogin"><strong>Login</strong></div>
+    <div class="col-4 text-light pt-3 pl-5" *ngIf="!isLogin"><strong>LogOut</strong></div>
+    <!-- <div class="col-4 text-light pt-3 pl-5" ><strong> <span routerLink="..">Back</span> </strong></div> -->
+</div>
+<router-outlet></router-outlet>

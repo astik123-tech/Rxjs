@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 mt-3" > <input type="text" class="form-control" #t ></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5  mt-3" ><button class="btn btn-success" style="width: 250px;" (click)="Additem(t)">Add</button> </div>
+</div>
+
+<div class="row bg-dark mt-5" style="min-height: 8vh;">
+    <div class="col-md-4 text-light pt-3 bg-primary" style="text-align: center;">  <strong>User 1</strong></div>
+    <div class="col-md-4 text-light pt-3 bg-danger" style="text-align: center;"><strong>User 2</strong></div>
+    <div class="col-md-4 text-light pt-3 bg-primary" style="text-align: center;"><strong> User 3</strong></div>
+</div>
+<div class="row mt-5" style="min-height: 8vh;">
+    <div class="col-md-4 pt-3 " style="text-align: center;">
+        <ul>
+            <li *ngFor="let a of itemList1" > <strong> {{a}}</strong></li>
+        </ul>
+    </div>
+    <div class="col-md-4 pt-3 " style="text-align: center;">
+        <ul>
+            <li *ngFor="let b of itemList2" > <strong> {{b}}</strong></li>
+        </ul>
+        <button *ngIf="user2" class="btn btn-success" (click)="subscribeUser2()">Subsribe</button>
+        <button *ngIf="!user2" class="btn btn-danger" (click)="Unsub()">Unsubsribe</button>
+    </div>
+    <div class="col-md-4 pt-3 " style="text-align: center;">
+        <ul>
+            <li *ngFor="let c of itemList3" > <strong> {{c}}</strong></li>
+            <button *ngIf="user3" class="btn btn-success" (click)="subscribeUser3()">Subsribe</button>
+            <button *ngIf="!user3" class="btn btn-danger" (click)="Unsub2()">Unsubsribe</button>
+        </ul>
+    </div>
+   
+</div>
